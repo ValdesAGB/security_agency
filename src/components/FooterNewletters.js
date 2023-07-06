@@ -47,6 +47,10 @@ function FooterNewletters() {
       width: 100%;
       height: 100%;
       color: #222;
+      padding: 0 10px 0 10px;
+      &:focus {
+        outline: none;
+      }
     }
     button {
       border: none;

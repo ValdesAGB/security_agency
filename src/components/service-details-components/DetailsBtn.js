@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AllServicesElements } from '../../data'
 import { styled } from 'styled-components'
 import { police } from '../../untils/police'
@@ -6,7 +6,9 @@ import { color } from '../../untils/color'
 import { LoadingContext, ServiceDetailsContext } from '../../untils/context'
 
 function DetailsBtn() {
-  const { service, setService } = useContext(ServiceDetailsContext)
+  const { service, setService, activeService, setActiveService } = useContext(
+    ServiceDetailsContext
+  )
   const { setLoad } = useContext(LoadingContext)
 
   const Button = styled.button`
@@ -27,11 +29,12 @@ function DetailsBtn() {
     }
   `
   const handleServiceClick = (serviceData) => {
+    setActiveService(serviceData)
     setLoad(true)
     setTimeout(() => {
       setService(serviceData)
       setLoad(false)
-    }, 3000)
+    }, 300)
   }
 
   return (
@@ -40,7 +43,7 @@ function DetailsBtn() {
         {AllServicesElements.map(({ id, title, cover }) => (
           <Button
             key={id}
-            active={service.id === id}
+            active={activeService.id === id}
             onClick={() => handleServiceClick({ id, title, cover })}
           >
             {title}

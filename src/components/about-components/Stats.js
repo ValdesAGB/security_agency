@@ -1,10 +1,60 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { styled } from 'styled-components'
 import { StatsElements } from '../../data'
 import { police } from '../../untils/police'
-import { color } from '../../untils/color'
 
 function Stats() {
+  const AnimatedValue = ({ value }) => {
+    const [displayValue, setDisplayValue] = useState(0)
+    const valueRef = useRef(null)
+
+    useEffect(() => {
+      let animationFrame
+      let startTimestamp
+
+      const getAnimationDuration = () => {
+        return 2000
+      }
+
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp
+        const progress = timestamp - startTimestamp
+        const duration = getAnimationDuration()
+
+        let stepValue
+        if (value < 5) {
+          stepValue = parseFloat((value * (progress / duration)).toFixed(1))
+        } else {
+          stepValue = Math.round((value / duration) * progress)
+        }
+
+        if (stepValue <= value) {
+          setDisplayValue(stepValue)
+          animationFrame = requestAnimationFrame(step)
+        } else {
+          setDisplayValue(value)
+        }
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animationFrame = requestAnimationFrame(step)
+          }
+        })
+      })
+
+      observer.observe(valueRef.current)
+
+      return () => {
+        cancelAnimationFrame(animationFrame)
+        observer.disconnect()
+      }
+    }, [value])
+
+    return <Level ref={valueRef}>{displayValue}</Level>
+  }
+
   const bgImage =
     'https://demo.hasthemes.com/safzon-preview/assets/images/bg/counter-bg.jpg'
 
@@ -81,7 +131,7 @@ function Stats() {
                     <Cover src={cover} alt={text} />
                   </div>
                   <div>
-                    <Level>{level}</Level>
+                    <AnimatedValue value={level} />
                     <Text>{text}</Text>
                   </div>
                 </div>

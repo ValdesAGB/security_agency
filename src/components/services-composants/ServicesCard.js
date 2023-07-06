@@ -12,7 +12,7 @@ function ServicesCard({ array, level }) {
     <React.Fragment>
       <Container>
         {array.slice(0, level).map(({ id, cover, title }) => (
-          <CardService cover={cover} title={title} key={id} />
+          <CardService id={id} cover={cover} title={title} key={id} />
         ))}
       </Container>
     </React.Fragment>

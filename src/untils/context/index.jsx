@@ -1,13 +1,16 @@
-import { createContext, useState } from 'react'
+import { createContext, useEffect, useState } from 'react'
 import { GalleryElements } from '../../data'
 const details = localStorage.getItem('details')
 
 export const ServiceDetailsContext = createContext()
 export const ServiceDetailsProvider = ({ children }) => {
   const [service, setService] = useState(details ? JSON.parse(details) : [])
+  const [activeService, setActiveService] = useState(service)
 
   return (
-    <ServiceDetailsContext.Provider value={{ service, setService }}>
+    <ServiceDetailsContext.Provider
+      value={{ service, setService, activeService, setActiveService }}
+    >
       {children}
     </ServiceDetailsContext.Provider>
   )

@@ -4,6 +4,7 @@ import { police } from '../../untils/police'
 import { color } from '../../untils/color'
 import video from '../../assets/video.mp4'
 import { TwoColors } from '../../untils/underline'
+import { Link } from 'react-router-dom'
 
 function Experience() {
   const Section = styled.section`
@@ -21,19 +22,20 @@ function Experience() {
 
   const Paragraph = styled.p`
     font-size: 16px;
-    margin-top: 30px;
+    margin: 30px 0 50px 0;
     line-height: 25px;
     font-family: ${police.second};
     color: ${color.five};
   `
 
-  const ContactBtn = styled.button`
+  const ContactBtn = styled(Link)`
     /*Revenir pour gérer l'animation du bouton */
     font-family: ${police.second};
     font-weight: 600;
     border-radius: 50px;
     padding: 1.5% 5%;
     margin-top: 5%;
+    text-decoration: none;
     color: white;
     background-color: ${color.main};
     transition: background-color 0.5s;
@@ -66,7 +68,7 @@ function Experience() {
                 in reprehen in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur Excepteur sint occaecat cupidata non proident.
               </Paragraph>
-              <ContactBtn className="btn">CONTACT US</ContactBtn>
+              <ContactBtn to="/contact">CONTACT US</ContactBtn>
             </div>
             <div className="col">
               <video

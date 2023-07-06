@@ -25,7 +25,7 @@ function ServiceSlider({ array, level }) {
       <Slider {...settings}>
         {array.slice(0, level).map(({ id, cover, title }) => (
           <Container key={id}>
-            <CardService cover={cover} title={title} />
+            <CardService id={id} cover={cover} title={title} />
           </Container>
         ))}
       </Slider>

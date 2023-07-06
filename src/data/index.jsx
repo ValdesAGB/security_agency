@@ -1,3 +1,54 @@
+export const logo =
+  'https://demo.hasthemes.com/safzon-preview/assets/images/logo/logo.png'
+
+export const menuElements = [
+  {
+    id: '1',
+    title: 'home',
+  },
+  {
+    id: '2',
+    title: 'about',
+  },
+  {
+    id: '3',
+    title: 'services',
+  },
+  {
+    id: '4',
+    title: 'gallery',
+  },
+  {
+    id: '5',
+    title: 'team',
+  },
+  {
+    id: '6',
+    title: 'contact',
+  },
+]
+
+export const SubHeaderElements = [
+  {
+    id: '1',
+    logo: 'facebook',
+  },
+
+  {
+    id: '2',
+    logo: 'twitter',
+  },
+
+  {
+    id: '3',
+    logo: 'vimeo',
+  },
+
+  {
+    id: '4',
+    logo: 'linkedin',
+  },
+]
 export const serviceElements = [
   {
     id: '1',

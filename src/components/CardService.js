@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { styled } from 'styled-components'
 import { color } from '../untils/color'
 import { police } from '../untils/police'
@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 import { ServiceDetailsContext } from '../untils/context'
 
 function CardService({ id, cover, title }) {
-  const { setService } = useContext(ServiceDetailsContext)
+  const { service, setService, setActiveService, activeService } = useContext(
+    ServiceDetailsContext
+  )
 
   const Card = styled.div`
     border: none;
@@ -58,7 +60,7 @@ function CardService({ id, cover, title }) {
       cover: cover,
       title: title,
     }
-
+    setActiveService(serviceData)
     setService(serviceData)
   }
 

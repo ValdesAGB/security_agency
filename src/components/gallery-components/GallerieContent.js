@@ -38,9 +38,11 @@ to {
 
   const Content = styled.div`
     position: relative;
-    display: grid;
+    display: ${load ? 'flex' : 'grid'};
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
     margin: 5% 0;
   `
 
@@ -121,17 +123,11 @@ to {
     }
   `
 
-  const LoadingContainer = styled.div`
-    text-align: center;
-  `
-
   return (
     <React.Fragment>
       <Content>
         {load ? (
-          <LoadingContainer>
-            <LoadingAnimation />
-          </LoadingContainer>
+          <LoadingAnimation />
         ) : (
           gallery.map(({ id, cover }) => (
             <CoverContainer key={id}>

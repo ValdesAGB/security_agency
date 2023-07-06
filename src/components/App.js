@@ -15,10 +15,14 @@ import {
 import Gallery from '../pages/Gallery'
 import NotFound from '../pages/404'
 import Copyright from './Copyright'
+import SubHeader from './SubHeader'
+import Header from './Header'
 
 function App() {
   return (
     <React.Fragment>
+      <SubHeader />
+      <Header />
       <main className="row">
         <LoadingProvider>
           <ServiceDetailsProvider>
