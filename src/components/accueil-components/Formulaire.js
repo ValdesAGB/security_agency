@@ -1,7 +1,4 @@
 import React from 'react'
-import { styled } from 'styled-components'
-import { color } from '../../untils/color'
-import { police } from '../../untils/police'
 import { formulaireInputElements } from '../../data'
 
 function Formulaire({
@@ -13,33 +10,9 @@ function Formulaire({
   Title,
   Head,
   condition,
+  Input,
+  Textarea,
 }) {
-  const Input = styled.input`
-    width: 100%;
-    border: solid 1px ${color.formulaireBorderColor};
-    height: 50px;
-    font-family: ${police.main};
-    color: ${color.formulaireColor};
-    margin-bottom: 5%;
-    padding: 10px 20px;
-    &:focus {
-      outline: none;
-    }
-  `
-
-  const Textarea = styled.textarea`
-    width: 100%;
-    border: solid 1px ${color.formulaireBorderColor};
-    height: 150px;
-    font-family: ${police.main};
-    color: ${color.formulaireColor};
-    margin-bottom: 5%;
-    padding: 10px 20px;
-    &:focus {
-      outline: none;
-    }
-  `
-
   return (
     <React.Fragment>
       <FormulaireStyle>

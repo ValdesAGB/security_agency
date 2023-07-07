@@ -5,54 +5,52 @@ import { police } from '../untils/police'
 import { Link } from 'react-router-dom'
 import { ServiceDetailsContext } from '../untils/context'
 
-function CardService({ id, cover, title }) {
-  const { service, setService, setActiveService, activeService } = useContext(
-    ServiceDetailsContext
-  )
-
-  const Card = styled.div`
-    border: none;
-    background-color: white;
+const Card = styled.div`
+  border: none;
+  background-color: white;
+  border-radius: 0px;
+  .card-img-top {
     border-radius: 0px;
-    .card-img-top {
-      border-radius: 0px;
-    }
-    .card-body {
-      margin: 5% 0;
-    }
-  `
-
-  const Title = styled(Link)`
-    color: ${color.six};
-    font-family: ${police.main};
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 600;
-    transition: color 0.5s;
-    &:hover {
-      color: ${color.main};
-    }
-  `
-
-  const Paragraph = styled.p`
-    color: ${color.sept};
-    font-family: ${police.second};
-    font-size: 14px;
+  }
+  .card-body {
     margin: 5% 0;
-  `
-  const ReadBtn = styled(Link)`
-    color: ${color.huit};
-    font-family: ${police.main};
-    font-size: 14px;
-    border: none;
-    text-decoration: none;
-    background-color: transparent;
-    font-weight: 600;
-    transition: color 0.5s;
-    &:hover {
-      color: ${color.main};
-    }
-  `
+  }
+`
+
+const Title = styled(Link)`
+  color: ${color.six};
+  font-family: ${police.main};
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  transition: color 0.5s;
+  &:hover {
+    color: ${color.main};
+  }
+`
+
+const Paragraph = styled.p`
+  color: ${color.sept};
+  font-family: ${police.second};
+  font-size: 14px;
+  margin: 5% 0;
+`
+const ReadBtn = styled(Link)`
+  color: ${color.huit};
+  font-family: ${police.main};
+  font-size: 14px;
+  border: none;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 600;
+  transition: color 0.5s;
+  &:hover {
+    color: ${color.main};
+  }
+`
+
+function CardService({ id, cover, title }) {
+  const { setService, setActiveService } = useContext(ServiceDetailsContext)
 
   const handleSetService = () => {
     const serviceData = {

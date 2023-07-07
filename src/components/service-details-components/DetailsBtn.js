@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext } from 'react'
 import { AllServicesElements } from '../../data'
 import { styled } from 'styled-components'
 import { police } from '../../untils/police'
@@ -6,7 +6,7 @@ import { color } from '../../untils/color'
 import { LoadingContext, ServiceDetailsContext } from '../../untils/context'
 
 function DetailsBtn() {
-  const { service, setService, activeService, setActiveService } = useContext(
+  const { setService, activeService, setActiveService } = useContext(
     ServiceDetailsContext
   )
   const { setLoad } = useContext(LoadingContext)
@@ -18,8 +18,8 @@ function DetailsBtn() {
     font-weight: 500;
     font-family: ${police.second};
     text-align: center;
-    padding: 10%;
-    margin-bottom: 10%;
+    padding: 20px;
+    margin-bottom: 20px;
     background-color: ${(props) =>
       props.active ? color.main : color.serviceDetailsBtnBgColor};
     color: ${(props) => (props.active ? 'white' : color.five)};

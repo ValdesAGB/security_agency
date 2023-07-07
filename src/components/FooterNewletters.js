@@ -4,61 +4,62 @@ import { color } from '../untils/color'
 import { police } from '../untils/police'
 import { FooterNewlettersElements } from '../data'
 
-function FooterNewletters() {
-  const Title = styled.h5`
-    font-weight: 600;
-    font-size: 18px;
-    font-family: ${police.main};
-    color: ${color.second};
-    margin-bottom: 10%;
-    span {
-      color: ${color.main};
-    }
-  `
+const Title = styled.h5`
+  font-weight: 600;
+  font-size: 18px;
+  font-family: ${police.main};
+  color: ${color.second};
+  margin-bottom: 15px;
+  span {
+    color: ${color.main};
+  }
+`
 
-  const Networks = styled.div`
-    a {
-      font-family: ${police.second};
-      font-size: 0.9em;
-      text-decoration: none;
-      margin: 0 10px;
-      padding: 1px 3px;
-      background-color: transparent;
-      color: ${color.second};
-      transition: background-color 0.5s, color 0.2s;
-      &:hover {
-        color: white;
-        background-color: ${color.main};
-      }
-    }
-  `
-
-  const Paragraph = styled.p`
-    color: ${color.second};
+const Networks = styled.div`
+  a {
     font-family: ${police.second};
-    font-size: 14px;
-    line-height: 25px;
-  `
-
-  const Form = styled.form`
-    margin: 6% 0;
-    input {
-      border: 1px solid #e5e5e5;
-      width: 100%;
-      height: 100%;
-      color: #222;
-      padding: 0 10px 0 10px;
-      &:focus {
-        outline: none;
-      }
-    }
-    button {
-      border: none;
-      background-color: ${color.main};
+    font-size: 0.9em;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 1px 3px;
+    background-color: transparent;
+    color: ${color.second};
+    transition: background-color 0.5s, color 0.2s;
+    &:hover {
       color: white;
-      padding: 8px;
+      background-color: ${color.main};
     }
-  `
+  }
+`
+
+const Paragraph = styled.p`
+  color: ${color.second};
+  font-family: ${police.second};
+  font-size: 14px;
+  line-height: 25px;
+`
+
+const Form = styled.form`
+  margin: 6% 0;
+  input {
+    border: 1px solid #e5e5e5;
+    width: 100%;
+    height: 100%;
+    color: #222;
+    padding: 0 10px 0 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+  button {
+    border: none;
+    background-color: ${color.main};
+    color: white;
+    padding: 8px;
+  }
+`
+
+function FooterNewletters() {
   return (
     <React.Fragment>
       <div>

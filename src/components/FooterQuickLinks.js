@@ -4,33 +4,34 @@ import { color } from '../untils/color'
 import { police } from '../untils/police'
 import { FooterQuickLinksElements } from '../data'
 
-function FooterQuickLinks() {
-  const Title = styled.h5`
-    font-weight: 600;
-    font-size: 18px;
-    font-family: ${police.main};
+const Title = styled.h5`
+  font-weight: 600;
+  font-size: 18px;
+  font-family: ${police.main};
+  color: ${color.second};
+  margin-bottom: 15px;
+  span {
+    color: ${color.main};
+  }
+`
+
+const List = styled.ul`
+  line-height: 25px;
+
+  a {
+    font-family: ${police.second};
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 30px;
     color: ${color.second};
-    margin-bottom: 10%;
-    span {
+    transition: color 0.5s;
+    &:hover {
       color: ${color.main};
     }
-  `
+  }
+`
 
-  const List = styled.ul`
-    line-height: 25px;
-
-    a {
-      font-family: ${police.second};
-      font-size: 14px;
-      text-decoration: none;
-      line-height: 30px;
-      color: ${color.second};
-      transition: color 0.5s;
-      &:hover {
-        color: ${color.main};
-      }
-    }
-  `
+function FooterQuickLinks() {
   return (
     <React.Fragment>
       <div>

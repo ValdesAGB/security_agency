@@ -11,7 +11,7 @@ import ServiceSlider from '../../components/accueil-components/ServiceSlider'
 import { AllServicesElements } from '../../data'
 
 function Accueil() {
-  const GuardComponentClassName = 'col'
+  const GuardComponentClassName = 'col-md-6 col-lg'
   const GuardComponentSlice = 3
   return (
     <React.Fragment>
@@ -33,3 +33,13 @@ function Accueil() {
 }
 
 export default Accueil
+/** 
+   
+   
+   
+
+      
+      <Guards
+        GuardClassName={GuardComponentClassName}
+        GuardSlice={GuardComponentSlice}
+      />*/

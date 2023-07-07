@@ -12,7 +12,7 @@ function Team() {
     }
   }, [window.location.pathname])
 
-  const GuardComponentClassName = 'col-4'
+  const GuardComponentClassName = 'col-md-6 col-lg-4'
   const GuardComponentSlice = 6
   const TeamComponentTitle = 'Team Page'
   const TeamComponentPageName = 'Team'

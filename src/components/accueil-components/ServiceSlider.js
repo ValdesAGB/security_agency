@@ -5,21 +5,44 @@ import 'slick-carousel/slick/slick-theme.css'
 import CardService from '../CardService'
 import { styled } from 'styled-components'
 
+const settings = {
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  arrows: false,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 1199,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+}
+
+const Container = styled.div`
+  padding: 2% 5%;
+`
+
 function ServiceSlider({ array, level }) {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-  }
-
-  const Container = styled.div`
-    padding: 2% 5%;
-  `
-
   return (
     <React.Fragment>
       <Slider {...settings}>

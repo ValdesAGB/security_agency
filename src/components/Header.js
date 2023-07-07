@@ -4,51 +4,86 @@ import { Link } from 'react-router-dom'
 import { police } from '../untils/police'
 import { color } from '../untils/color'
 import { styled } from 'styled-components'
+import AppointmentBtn from './AppointmentBtn'
 
-function Header() {
-  const ListLink = styled.ul`
-    position: relative;
+const Navigation = styled.div`
+  @media (max-width: 991px) {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+`
+
+const ButtonOpenAndClosed = styled.button`
+  border: none !important;
+  &:focus {
+    outline: none !important;
+  }
+`
+
+const ListLink = styled.ul`
+  position: relative;
+  @media (max-width: 991px) {
+    margin: 10px 0;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    left: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: 1400px) {
     left: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
-  `
+  }
+`
 
-  const LinkItems = styled(Link)`
-    color: ${color.galleryBtnColor};
+const LinkItems = styled(Link)`
+  color: ${color.galleryBtnColor};
+  font-weight: 600;
+  font-family: ${police.main};
+  font-size: 14px;
+  &:hover {
+    color: ${color.main};
+  }
+  @media (max-width: 991px) {
+    margin-bottom: 5px;
+  }
+  @media (min-width: 992px) and (max-width: 1199px) {
     padding: 35px 0;
-    font-weight: 600;
-    font-family: ${police.main};
-    font-size: 14px;
-    margin: 0 10px;
-    &:hover {
-      color: ${color.main};
-    }
-  `
+    margin-right: 20px;
+  }
 
-  const Appointment = styled(Link)`
-    border-radius: 50px;
-    border: 1px solid ${color.main};
-    padding: 10px 30px;
-    font-size: 14px;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    background-color: ${color.main};
-    font-family: ${police.second};
-  `
+  @media (min-width: 1200px) {
+    padding: 35px 0;
+    margin-right: 30px;
+  }
+`
+
+function Header() {
   return (
     <React.Fragment>
-      <div className="row bg-body-tertiary">
+      <Navigation className="row">
         <div>
-          <div className="container ">
+          <div className="container p-0">
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
                 <Link to="/" className="navbar-brand" href="#">
                   <img src={logo} alt="logo" className="w-100" />
                 </Link>
-                <button
+                <ButtonOpenAndClosed
                   className="navbar-toggler"
                   type="button"
                   data-bs-toggle="collapse"
@@ -58,7 +93,7 @@ function Header() {
                   aria-label="Toggle navigation"
                 >
                   <span className="navbar-toggler-icon"></span>
-                </button>
+                </ButtonOpenAndClosed>
                 <div className="collapse navbar-collapse " id="navbarNav">
                   <ListLink className="navbar-nav">
                     {menuElements.map(({ id, title }) => (
@@ -71,16 +106,15 @@ function Header() {
                         </LinkItems>
                       </li>
                     ))}
-                    <li className="nav-item">
-                      <Appointment to="/contact">Appointment</Appointment>
-                    </li>
+
+                    <AppointmentBtn />
                   </ListLink>
                 </div>
               </div>
             </nav>
           </div>
         </div>
-      </div>
+      </Navigation>
     </React.Fragment>
   )
 }

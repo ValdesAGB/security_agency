@@ -4,80 +4,114 @@ import { styled, keyframes } from 'styled-components'
 import { police } from '../../untils/police'
 import { color } from '../../untils/color'
 
-function Home() {
-  const bgImage =
-    'https://demo.hasthemes.com/safzon-preview/assets/images/hero/hero-1.jpg'
+const bgImage =
+  'https://demo.hasthemes.com/safzon-preview/assets/images/hero/hero-1.jpg'
 
-  const fadeInUp = keyframes`
-  0% {
-    opacity: 0;
-    transform: translateY(100%);
+const fadeInUp = keyframes`
+0% {
+opacity: 0;
+transform: translateY(100%);
+}
+100% {
+opacity: 1;
+transform: translateY(0);
+}
+`
+
+const Section = styled.section`
+  background: url(${bgImage}) center center / cover no-repeat;
+  @media (max-width: 767px) {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+  @media (min-width: 768px) and (max-width: 991px) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 `
 
-  const Section = styled.section`
-    background: url(${bgImage}) center center / cover no-repeat;
-  `
-
-  const Content = styled.div`
-    padding: 10% 0;
-    h3 {
-      font-family: ${police.main};
-      color: ${color.main};
-      font-weight: 400;
-      animation: ${fadeInUp} 1s both;
-    }
-    h1 {
-      font-size: 5em;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 3%;
-      animation: ${fadeInUp} 1s linear both;
-      animation-delay: 0.5s;
-    }
-    p {
-      font-family: ${police.second};
-      font-size: 14px;
-      color: white;
-      animation: ${fadeInUp} 1s linear both;
-      animation-delay: 1.5s;
-    }
-  `
-
-  const AppointmentBtn = styled.button`
-    /*Revenir pour gérer l'animation du bouton */
-    font-family: ${police.second};
-    font-weight: 600;
-    border-radius: 50px;
-    padding: 1.5% 5%;
-    margin-top: 5%;
-    color: white;
-    background-color: ${color.main};
-    transition: background-color 0.5s;
-    &:hover {
-      color: white;
-      background-color: ${color.second};
-    }
-    &:focus {
-      color: white;
-      background-color: ${color.second};
-    }
+const Content = styled.div`
+  padding: 10% 0;
+  h5 {
+    font-size: 22px;
+    font-family: ${police.main};
+    color: ${color.main};
+    font-weight: 400;
+    animation: ${fadeInUp} 1s both;
+  }
+  h1 {
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 3%;
+    font-family: ${police.main};
     animation: ${fadeInUp} 1s linear both;
-    animation-delay: 2s;
-  `
+    animation-delay: 0.5s;
+    font-size: 72px;
+    @media (max-width: 767px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+    @media (min-width: 767px) and (max-width: 1199px) {
+      font-size: 46px;
+    }
+  }
+  p {
+    max-width: 570px;
+    line-height: 25px;
+    font-family: ${police.second};
+    font-size: 14px;
+    color: white;
+    animation: ${fadeInUp} 1s linear both;
+    animation-delay: 1.5s;
+  }
+`
 
+const AppointmentBtn = styled.button`
+  /*Revenir pour gérer l'animation du bouton */
+  font-size: 14px;
+  font-family: ${police.second};
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 1.5% 5%;
+  margin-top: 5%;
+  color: white;
+  background-color: ${color.main};
+  transition: background-color 0.5s;
+  &:hover {
+    color: white;
+    background-color: ${color.second};
+  }
+  &:focus {
+    color: white;
+    background-color: ${color.second};
+  }
+  animation: ${fadeInUp} 1s linear both;
+  animation-delay: 2s;
+  @media (max-width: 767px) {
+    margin-top: 10px;
+    padding: 8px 25px;
+    line-height: 22px;
+    height: 40px;
+  }
+`
+
+function Home() {
   return (
     <React.Fragment>
       <Section>
         <Content className="container">
           <div>
             <div className="row">
-              <div className="col-7">
-                <h3>We Provide The Best</h3>
+              <div className=" col-md-10 col-xl-8">
+                <h5>We Provide The Best</h5>
                 <h1>Security Service</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed

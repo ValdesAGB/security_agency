@@ -269,7 +269,7 @@ export const OthersContactElements = [
     data2: 'urwebsite@name.com',
   },
   {
-    id: '1',
+    id: '3',
     icone: 'geo-alt-fill',
     data: 'Address goes here, street, Crossroad 123.',
     href: 'https://www.google.com/maps/place/Address+goes+here,+street,+Crossroad+123',

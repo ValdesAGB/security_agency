@@ -3,55 +3,69 @@ import { SubHeaderElements } from '../data'
 import { styled } from 'styled-components'
 import { police } from '../untils/police'
 import { color } from '../untils/color'
+import PropTypes from 'prop-types'
 
-function SubHeader() {
-  const Section = styled.section`
-    background: #444444;
-    padding: 10px 0px 5px 0;
-  `
+const DefaultSection = styled.section`
+  background: #444444;
+  padding: 10px 0px 5px 0;
+  @media (max-width: 991px) {
+    display: none;
+  }
+`
 
-  const AnyQuestion = styled.h3`
-    color: white;
-    font-size: 14px;
-    font-family: ${police.second};
-    text-align: left;
-    a {
-      text-decoration: none;
-      color: white;
-    }
-  `
-  const IconeList = styled.ul`
-    text-align: right;
-    padding: 0;
-    li {
-      margin: 0 10px;
-    }
-  `
-
-  const LinkIcone = styled.a`
+const DefaultAnyQuestion = styled.h3`
+  color: white;
+  font-size: 14px;
+  font-family: ${police.second};
+  text-align: left;
+  a {
     text-decoration: none;
     color: white;
-    transition: color 0.3s;
-    &:hover {
-      color: ${color.main};
-    }
-    i {
-      font-size: 16px;
-    }
-  `
+  }
+`
+
+const DefaultIconeList = styled.ul`
+  text-align: right;
+  padding: 0;
+  li {
+    margin: 0 10px;
+  }
+`
+
+const DefaultLinkIcone = styled.a`
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s;
+  &:hover {
+    color: ${color.main};
+  }
+  i {
+    font-size: 16px;
+  }
+`
+
+function SubHeader({
+  Section = DefaultSection,
+  AnyQuestion = DefaultAnyQuestion,
+  IconeList = DefaultIconeList,
+  LinkIcone = DefaultLinkIcone,
+  AnyQuestionClassName,
+  IconeListClassName,
+  AnyQuestionAndIconeListContainerClassName,
+}) {
   return (
     <React.Fragment>
       <Section className="row">
         <div>
           <div className="container">
-            <div className="row align-items-center">
-              <AnyQuestion className="col">
+            <div className={AnyQuestionAndIconeListContainerClassName}>
+              <AnyQuestion className={AnyQuestionClassName}>
                 Have any question ?{' '}
                 <a href="tel://+215 2145 2154" target="_blank">
                   +215 2145 2154
                 </a>
               </AnyQuestion>
-              <IconeList className="list-inline col">
+              <IconeList className={IconeListClassName}>
                 {SubHeaderElements.map(({ id, logo }) => (
                   <li key={id} className="list-inline-item">
                     <LinkIcone href="#">
@@ -68,4 +82,19 @@ function SubHeader() {
   )
 }
 
+SubHeader.propTypes = {
+  Section: PropTypes.object,
+  AnyQuestion: PropTypes.object,
+  IconeList: PropTypes.object,
+  LinkIcone: PropTypes.object,
+  AnyQuestionClassName: PropTypes.string,
+  IconeListClassName: PropTypes.string,
+  AnyQuestionAndIconeListContainerClassName: PropTypes.string,
+}
+
+SubHeader.defaultProps = {
+  AnyQuestionClassName: 'col',
+  IconeListClassName: 'list-inline col',
+  AnyQuestionAndIconeListContainerClassName: 'row align-items-center',
+}
 export default SubHeader

@@ -9,7 +9,8 @@ export const color = {
   huit: '#818181',
   nine: '#585757',
   whyTitleColor: '#3d3d3d',
-  formulaireBorderColor: '#e1e1e1',
+  formulaireBorderColor: 'rgba(255, 255, 255, 0.4);',
+  formulairePlaceholderColor: '#e1e1e1',
   formulaireColor: '#707070',
   formulaireBacgroundCOlor: '#f4f4f4',
   feedbackPagraphColor: '#3e3e3e',
@@ -22,4 +23,6 @@ export const color = {
   galleryBtnColor: '#333',
   copyrightBgColor: '#dadada',
   copyrightColor: '#424242',
+  serviceTitleColor: '#5f5f5f',
+  serviceParagraphColor: '#5b5b5b',
 }

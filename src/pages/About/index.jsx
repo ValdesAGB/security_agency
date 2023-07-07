@@ -16,7 +16,7 @@ function About() {
 
   const AboutComponentTitle = 'About Us'
   const AboutComponentPageName = 'About Us'
-  const GuardComponentClassName = 'col-4'
+  const GuardComponentClassName = 'col-md-6 col-lg'
   const GuardComponentSlice = 3
 
   return (

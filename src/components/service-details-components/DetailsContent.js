@@ -5,6 +5,30 @@ import { color } from '../../untils/color'
 import LoadingAnimation from '../../untils/Loader'
 import { LoadingContext, ServiceDetailsContext } from '../../untils/context'
 
+const Title = styled.h4`
+  font-weight: 600;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  color: ${color.second};
+  font-family: ${police.main};
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  font-size: 24px;
+  line-height: 30px;
+`
+
+const Paragaph = styled.p`
+  line-height: 25px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  visibility: visible;
+  font-family: ${police.second};
+  color: ${color.five};
+`
+
 function DetailsContent() {
   const { service } = useContext(ServiceDetailsContext)
   const { load } = useContext(LoadingContext)
@@ -13,25 +37,6 @@ function DetailsContent() {
     display: ${load && 'flex'};
     justify-content: center;
     align-items: center;
-  `
-
-  const Title = styled.h4`
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: ${color.second};
-    font-family: ${police.main};
-    margin: 2% 0;
-  `
-
-  const Paragaph = styled.p`
-    line-height: 25px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
-    font-family: ${police.second};
-    color: ${color.five};
   `
   return (
     <React.Fragment>

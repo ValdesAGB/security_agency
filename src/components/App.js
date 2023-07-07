@@ -17,10 +17,12 @@ import NotFound from '../pages/404'
 import Copyright from './Copyright'
 import SubHeader from './SubHeader'
 import Header from './Header'
+import ScrollToTopOnPageChange from './ScrollToTopOnPageChange'
 
 function App() {
   return (
     <React.Fragment>
+      <ScrollToTopOnPageChange />
       <SubHeader />
       <Header />
       <main className="row">
@@ -48,3 +50,13 @@ function App() {
 }
 
 export default App
+/**
+ * 
+
+      <Header />
+
+
+        
+     
+
+ */
