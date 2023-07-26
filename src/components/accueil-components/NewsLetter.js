@@ -11,7 +11,7 @@ const Section = styled.section`
 `
 
 const SubTitle = styled.h4`
-  color: #ffffff;
+  color: ${color.homeTitle};
   font-weight: 500;
   font-family: ${police.main};
   text-align: left;
@@ -24,7 +24,7 @@ const SubTitle = styled.h4`
 `
 
 const Title = styled.h2`
-  color: #ffffff;
+  color: ${color.homeTitle};
   font-weight: 600;
 
   font-family: ${police.main};
@@ -104,10 +104,6 @@ const SubmitBtn = styled.button`
     color: white;
     background-color: ${color.second};
   }
-  &:focus {
-    color: white;
-    background-color: ${color.second};
-  }
   @media (max-width: 575px) {
     margin-left: 4%;
   }
@@ -127,7 +123,7 @@ function NewsLetter() {
                 <SubTitle>Join Our volunteer</SubTitle>
                 <Title>Subscribe Our Newsletter.</Title>
               </div>
-              <InputAndBtnContainer className="col  ">
+              <InputAndBtnContainer className="col">
                 <div className="row">
                   <div className="col-md-9 col-lg-7 col-xl-8">
                     <Input

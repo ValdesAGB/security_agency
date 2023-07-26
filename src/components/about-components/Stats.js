@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { styled } from 'styled-components'
 import { StatsElements } from '../../data'
 import { police } from '../../untils/police'
+import { color } from '../../untils/color'
 
 const AnimatedValue = ({ value }) => {
   const [displayValue, setDisplayValue] = useState(0)
@@ -72,7 +73,6 @@ const StatsContainer = styled.div`
   padding-bottom: 90px;
   padding-top: 90px;
 `
-/**padding: 90px 120px; */
 
 const Content = styled.div`
   @media (max-width: 767px) {
@@ -84,7 +84,7 @@ const Cover = styled.img``
 
 const Level = styled.h3`
   font-weight: 700;
-  color: #ffffff;
+  color: ${color.homeTitle};
   margin-top: 10px;
   @media (max-width: 767px) {
     font-size: 28px;
@@ -94,7 +94,7 @@ const Level = styled.h3`
   line-height: 36px;
 `
 const Text = styled.p`
-  color: #ffffff;
+  color: ${color.homeTitle};
   font-weight: 500;
   font-size: 17px;
   position: relative;

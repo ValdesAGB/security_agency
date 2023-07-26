@@ -11,7 +11,7 @@ const Section = styled.section`
     padding-top: 60px;
     padding-bottom: 30px;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     padding-top: 60px;
     padding-bottom: 40px;
   }
@@ -36,7 +36,7 @@ const Head = styled.div`
       font-size: 26px;
       line-height: 30px;
     }
-    @media (max-width: 767px) {
+    @media (min-width: 480px) and (max-width: 767px) {
       font-size: 30px;
       line-height: 37px;
     }
@@ -58,7 +58,7 @@ const Underline = styled.div`
   @media (max-width: 479px) {
     width: 45%;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     width: 30%;
   }
   @media (min-width: 768px) and (max-width: 991px) {

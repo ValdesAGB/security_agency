@@ -3,6 +3,7 @@ import 'animate.css'
 import { styled, keyframes } from 'styled-components'
 import { police } from '../../untils/police'
 import { color } from '../../untils/color'
+import { Link } from 'react-router-dom'
 
 const bgImage =
   'https://demo.hasthemes.com/safzon-preview/assets/images/hero/hero-1.jpg'
@@ -38,7 +39,7 @@ const Section = styled.section`
   }
 `
 
-const Content = styled.div`
+const Container = styled.div`
   padding: 10% 0;
   h5 {
     font-size: 22px;
@@ -49,7 +50,7 @@ const Content = styled.div`
   }
   h1 {
     font-weight: 700;
-    color: #ffffff;
+    color: ${color.homeTitle};
     margin-bottom: 3%;
     font-family: ${police.main};
     animation: ${fadeInUp} 1s linear both;
@@ -68,29 +69,27 @@ const Content = styled.div`
     line-height: 25px;
     font-family: ${police.second};
     font-size: 14px;
-    color: white;
+    color: ${color.homeTitle};
     animation: ${fadeInUp} 1s linear both;
     animation-delay: 1.5s;
   }
 `
 
-const AppointmentBtn = styled.button`
+const AppointmentBtn = styled(Link)`
   /*Revenir pour gérer l'animation du bouton */
   font-size: 14px;
   font-family: ${police.second};
   font-weight: 500;
   border-radius: 50px;
   padding: 1.5% 5%;
-  margin-top: 5%;
-  color: white;
+  display: inline-block;
+  margin-top: 3%;
+  border: none;
+  text-decoration: none;
+  color: ${color.homeTitle};
   background-color: ${color.main};
   transition: background-color 0.5s;
   &:hover {
-    color: white;
-    background-color: ${color.second};
-  }
-  &:focus {
-    color: white;
     background-color: ${color.second};
   }
   animation: ${fadeInUp} 1s linear both;
@@ -107,7 +106,7 @@ function Home() {
   return (
     <React.Fragment>
       <Section>
-        <Content className="container">
+        <Container className="container">
           <div>
             <div className="row">
               <div className=" col-md-10 col-xl-8">
@@ -118,11 +117,11 @@ function Home() {
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
-                <AppointmentBtn className="btn">GET APPOINTMENT</AppointmentBtn>
+                <AppointmentBtn to="/contact">GET APPOINTMENT</AppointmentBtn>
               </div>
             </div>
           </div>
-        </Content>
+        </Container>
       </Section>
     </React.Fragment>
   )

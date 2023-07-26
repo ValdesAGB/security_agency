@@ -12,7 +12,7 @@ const HeadTitle = styled.h2`
     font-size: 26px;
     line-height: 30px;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     font-size: 30px;
     line-height: 37px;
   }

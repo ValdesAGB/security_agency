@@ -33,13 +33,3 @@ function Accueil() {
 }
 
 export default Accueil
-/** 
-   
-   
-   
-
-      
-      <Guards
-        GuardClassName={GuardComponentClassName}
-        GuardSlice={GuardComponentSlice}
-      />*/

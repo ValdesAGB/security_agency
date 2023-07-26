@@ -61,10 +61,6 @@ const formulaireSubmitBtn = styled.button`
     color: white;
     background-color: ${color.second};
   }
-  &:focus {
-    color: white;
-    background-color: ${color.second};
-  }
 `
 
 const Underline = styled.div`

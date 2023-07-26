@@ -1,17 +1,18 @@
 import React from 'react'
 import { styled } from 'styled-components'
 
+const MapContainer = styled.div`
+  padding: 0;
+`
+const Carte = styled.iframe`
+  width: 100%;
+  height: 80vh;
+  @media (min-width: 2560px) {
+    height: 50vh;
+  }
+`
+
 function Map() {
-  const MapContainer = styled.div`
-    padding: 0;
-  `
-  const Carte = styled.iframe`
-    width: 100%;
-    height: 80vh;
-    @media (min-width: 2560px) {
-      height: 50vh;
-    }
-  `
   return (
     <React.Fragment>
       <MapContainer>

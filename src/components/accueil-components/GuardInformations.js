@@ -6,7 +6,7 @@ import { police } from '../../untils/police'
 function GuardInformations({ container, name }) {
   const GuardInformation = styled.div`
     padding: 5% 0;
-    background-color: #ffffff;
+    background-color: ${color.homeTitle};
     transition: background-color 0.4s;
     ${container}:hover & {
       background-color: ${color.main};
@@ -17,7 +17,7 @@ function GuardInformations({ container, name }) {
       font-weight: 600;
       font-family: ${police.main};
       color: ${color.guardInfomartionsColor};
-      transition: color 0.4s;
+      transition: color 0.4s 0.2s;
       ${container}:hover & {
         color: white;
       }
@@ -27,7 +27,7 @@ function GuardInformations({ container, name }) {
       font-weight: 400;
       font-family: ${police.second};
       color: ${color.guardInfomartionsColor};
-      transition: color 0.4s;
+      transition: color 0.4s 0.2s;
       ${container}:hover & {
         color: white;
       }

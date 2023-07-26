@@ -22,6 +22,7 @@ const Container = styled.div`
 
 const formulaireTitle = 'Request a Quote'
 const formulaireSubmit = 'SUBMIT INQUIRY'
+
 const formulaireStyle = styled.div`
   background-color: ${color.formulaireBacgroundCOlor};
   @media (max-width: 767px) {
@@ -34,6 +35,7 @@ const formulaireStyle = styled.div`
   }
   padding: 65px 60px;
 `
+
 const formulaireSubmitBtn = styled.button`
   /*Revenir pour gérer l'animation du bouton */
   font-family: ${police.second};
@@ -44,19 +46,14 @@ const formulaireSubmitBtn = styled.button`
   border: none;
   width: 100%;
   padding: 5% 10%;
-
   color: white;
   background-color: ${color.main};
   transition: background-color 0.5s;
   &:hover {
-    color: white;
-    background-color: ${color.second};
-  }
-  &:focus {
-    color: white;
     background-color: ${color.second};
   }
 `
+
 const formulaireTitleStyle = styled.h2`
   font-weight: 600;
   color: ${color.whyTitleColor};
@@ -70,6 +67,7 @@ const formulaireTitleStyle = styled.h2`
   font-size: 30px;
   line-height: 42px;
 `
+
 const formulaireHeadStyled = styled.div`
   margin-bottom: 10%;
 `

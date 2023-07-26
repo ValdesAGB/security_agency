@@ -66,7 +66,7 @@ const Underline = styled.div`
   @media (max-width: 479px) {
     width: 40%;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     width: 30%;
   }
   @media (min-width: 768px) {
@@ -91,17 +91,24 @@ const Content = styled.div`
   @media (max-width: 767px) {
     padding: 40px 30px;
   }
-
   padding: 40px 10px;
   margin: 0;
   box-shadow: 0 0 10px ${color.feedbackBoxShadowColor};
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+  &:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+  }
 `
 
 const Cover = styled.img`
   @media (max-width: 479px) {
     margin: 0 auto 20px;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     margin-bottom: 20px;
   }
   @media (min-width: 1200px) {

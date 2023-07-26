@@ -46,7 +46,7 @@ const IconeContainer = styled.div`
 const Icone = styled.i`
   font-size: 1.5em;
   color: ${color.main};
-  transition: background-color 0.9s;
+  transition: color 0.4s 0.2s;
   ${IconeContainer}:hover & {
     color: white;
   }

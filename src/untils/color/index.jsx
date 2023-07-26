@@ -25,4 +25,6 @@ export const color = {
   copyrightColor: '#424242',
   serviceTitleColor: '#5f5f5f',
   serviceParagraphColor: '#5b5b5b',
+  loadingBorderColor: '#f3f3f3',
+  homeTitle: '#ffffff',
 }

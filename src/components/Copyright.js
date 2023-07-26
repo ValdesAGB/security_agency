@@ -18,7 +18,7 @@ const Section = styled.section`
 const WebGrowth = styled.a`
   color: ${color.copyrightColor};
   text-decoration: none;
-  transition: color 0.5s, text-decoration 0.5s;
+  transition: color 0.5s;
   &:hover {
     color: ${color.main};
     text-decoration: underline;

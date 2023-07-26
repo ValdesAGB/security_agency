@@ -37,4 +37,3 @@ function ServiceDetails() {
 }
 
 export default ServiceDetails
-/**service.title !== null ? service.title.toUpperCase() : 'SERVICE DETAILS' */

@@ -8,6 +8,7 @@ import GuardNetworks from './GuardNetworks'
 import GuardInformations from './GuardInformations'
 import GuardCover from './GuardCover'
 import { Link } from 'react-router-dom'
+
 const Section = styled.div`
   background-color: ${color.guardsBgColor};
   @media (max-width: 479px) {

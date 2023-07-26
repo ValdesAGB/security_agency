@@ -8,7 +8,7 @@ const spin = keyframes`
 `
 
 const LoaderContainer = styled.div`
-  border: 16px solid #f3f3f3;
+  border: 16px solid ${color.loadingBorderColor};
   border-top: 16px solid ${color.main};
   border-radius: 50%;
   width: 70px;

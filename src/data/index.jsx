@@ -49,6 +49,7 @@ export const SubHeaderElements = [
     logo: 'linkedin',
   },
 ]
+
 export const serviceElements = [
   {
     id: '1',
@@ -412,5 +413,27 @@ export const GalleryBtnElements = [
     id: '4',
     title: 'graphic',
     cat: 'graphic',
+  },
+]
+
+export const NetworksElements = [
+  {
+    id: '1',
+    icone: 'facebook',
+  },
+
+  {
+    id: '2',
+    icone: 'twitter',
+  },
+
+  {
+    id: '3',
+    icone: 'google',
+  },
+
+  {
+    id: '4',
+    icone: 'vimeo',
   },
 ]

@@ -5,29 +5,30 @@ import { police } from '../../untils/police'
 import { color } from '../../untils/color'
 import { LoadingContext, ServiceDetailsContext } from '../../untils/context'
 
+const Button = styled.button`
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: ${police.second};
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: ${(props) =>
+    props.active ? color.main : color.serviceDetailsBtnBgColor};
+  color: ${(props) => (props.active ? 'white' : color.five)};
+  transition: color 0.3s;
+  &:hover {
+    color: ${(props) => (props.active ? 'white' : color.main)};
+  }
+`
+
 function DetailsBtn() {
   const { setService, activeService, setActiveService } = useContext(
     ServiceDetailsContext
   )
   const { setLoad } = useContext(LoadingContext)
 
-  const Button = styled.button`
-    border: none;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: ${police.second};
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    background-color: ${(props) =>
-      props.active ? color.main : color.serviceDetailsBtnBgColor};
-    color: ${(props) => (props.active ? 'white' : color.five)};
-    transition: color 0.3s;
-    &:hover {
-      color: ${(props) => (props.active ? 'white' : color.main)};
-    }
-  `
   const handleServiceClick = (serviceData) => {
     setActiveService(serviceData)
     setLoad(true)

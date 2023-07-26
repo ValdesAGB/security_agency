@@ -1,10 +1,11 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { color } from '../../untils/color'
+import { NetworksElements } from '../../data'
 
 function GuardNetworks({ container }) {
   const Networks = styled.div`
-    background-color: #ffffff;
+    background-color: ${color.homeTitle};
     transition: background-color 0.4s;
     ${container}:hover & {
       background-color: ${color.main};
@@ -27,7 +28,7 @@ function GuardNetworks({ container }) {
 
   const ListItemLink = styled.a`
     color: ${color.guardNetworksColor};
-    transition: color 0.4s;
+    transition: color 0.4s 0.2s;
     ${container}:hover & {
       color: white;
     }
@@ -37,26 +38,13 @@ function GuardNetworks({ container }) {
     <React.Fragment>
       <Networks>
         <List className="list-inline">
-          <li className="list-inline-item">
-            <ListItemLink href="#">
-              <i className="bi bi-facebook"></i>
-            </ListItemLink>
-          </li>
-          <li className="list-inline-item">
-            <ListItemLink href="#">
-              <i className="bi bi-twitter"></i>
-            </ListItemLink>
-          </li>
-          <li className="list-inline-item">
-            <ListItemLink href="#">
-              <i className="bi bi-google"></i>
-            </ListItemLink>
-          </li>
-          <li className="list-inline-item">
-            <ListItemLink href="#">
-              <i className="bi bi-vimeo"></i>
-            </ListItemLink>
-          </li>
+          {NetworksElements.map(({ id, icone }) => (
+            <li className="list-inline-item" key={id}>
+              <ListItemLink href="#">
+                <i className={`bi bi-${icone}`}></i>
+              </ListItemLink>
+            </li>
+          ))}
         </List>
       </Networks>
     </React.Fragment>

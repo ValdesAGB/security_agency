@@ -21,7 +21,7 @@ const Button = styled.button`
   text-transform: uppercase;
   background-color: ${(props) =>
     props.active ? color.main : color.galleryBtnColor};
-  color: #ffffff;
+  color: ${color.homeTitle};
   transition: background-color 0.4s, color 0.5s;
   &:hover {
     color: white;
@@ -43,7 +43,7 @@ function GallerieBtn() {
     setTimeout(() => {
       setGallery(filteredGallery)
       setLoad(false)
-    }, 2000)
+    }, 800)
   }
 
   return (

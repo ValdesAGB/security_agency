@@ -5,6 +5,10 @@ import { color } from '../../untils/color'
 import LoadingAnimation from '../../untils/Loader'
 import { LoadingContext, ServiceDetailsContext } from '../../untils/context'
 
+const Cover = styled.img`
+  width: 100%;
+`
+
 const Title = styled.h4`
   font-weight: 600;
   margin-bottom: 15px;
@@ -45,7 +49,7 @@ function DetailsContent() {
           <LoadingAnimation />
         ) : (
           <>
-            <img src={service.cover} alt="1" className="w-100" />
+            <Cover src={service.cover} alt={`${service.title} - cover`} />
             <Title>{service.title}</Title>
             <div>
               <Paragaph>

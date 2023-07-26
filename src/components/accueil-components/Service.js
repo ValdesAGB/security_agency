@@ -14,7 +14,7 @@ const Content = styled.div`
   @media (max-width: 479px) {
     padding: 39px 15px;
   }
-  @media (max-width: 767px) {
+  @media (min-width: 480px) and (max-width: 767px) {
     padding: 29px 15px;
   }
   @media (min-width: 768px) and (max-width: 991px) {
@@ -24,18 +24,23 @@ const Content = styled.div`
     padding: 30px 20px;
   }
   padding: 50px 69px;
+  cursor: pointer;
 `
 
 const IllustartionContainer = styled.div`
+  margin-top: 1rem;
   @media (max-width: 767px) {
     text-align: center;
+  }
+  transition: transform 0.5s;
+  ${Content}:hover & {
+    transform: scale(1.1);
   }
 `
 
 const Illustartion = styled.img`
-  @media (min-width: 320px) {
-    width: 100%;
-  }
+  width: 100%;
+
   @media (min-width: 480px) {
     width: 70%;
   }
@@ -48,11 +53,11 @@ const Illustartion = styled.img`
 `
 
 const Title = styled.h4`
-  font-size: 18px;
   margin-bottom: 7px;
   font-weight: 600;
   color: ${color.serviceTitleColor};
   font-family: ${police.main};
+  font-size: 18px;
   @media (min-width: 992px) and (max-width: 1199px) {
     font-size: 16px;
   }
@@ -74,10 +79,10 @@ function Service() {
           {serviceElements.map(({ id, illustration, title, text }) => (
             <Content key={id} className="col-sm-6 col-lg" id={id}>
               <div className="row">
-                <IllustartionContainer className="col-3 col-md-2 col-lg-3  col-xxl-3 mt-3">
+                <IllustartionContainer className="col-3 col-md-2 col-lg-3">
                   <Illustartion src={illustration} alt={title} />
                 </IllustartionContainer>
-                <div className="col-9 col-md-10 col-lg-9 col-xxl-9">
+                <div className="col-9 col-md-10 col-lg-9">
                   <Title>{title}</Title>
                   <Paragraph>{text}</Paragraph>
                 </div>

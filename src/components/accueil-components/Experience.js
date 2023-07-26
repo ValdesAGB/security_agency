@@ -111,6 +111,10 @@ const VideoContainer = styled.div`
   @media (min-width: 768px) and (max-width: 991px) {
     margin-top: 10%;
   }
+
+  video {
+    width: 100%;
+  }
 `
 
 function Experience() {
@@ -119,7 +123,7 @@ function Experience() {
       <Section>
         <div className="container">
           <div className="row justify-content-center align-items-center">
-            <div className="col-lg ">
+            <div className="col-lg">
               <Title>
                 We Have 21 Years of <br /> Experience
               </Title>
@@ -140,7 +144,6 @@ function Experience() {
             </div>
             <VideoContainer className="col-md-8 col-lg">
               <video
-                className="w-100"
                 src={video}
                 controls
                 poster="https://demo.hasthemes.com/safzon-preview/assets/images/about/about-01.png"
@@ -154,4 +157,3 @@ function Experience() {
 }
 
 export default Experience
-/***/

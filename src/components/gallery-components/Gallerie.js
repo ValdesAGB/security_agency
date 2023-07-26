@@ -26,6 +26,8 @@ const Container = styled.div`
   }
 
   padding-top: 120px;
+
+  transition: all 2s;
 `
 
 function Gallerie() {

@@ -17,11 +17,14 @@ const Navigation = styled.div`
     padding-bottom: 10px;
   }
 `
+const Logo = styled.img`
+  width: 100%;
+`
 
 const ButtonOpenAndClosed = styled.button`
   border: none !important;
   &:focus {
-    outline: none !important;
+    border: none !important;
   }
 `
 
@@ -81,7 +84,7 @@ function Header() {
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
                 <Link to="/" className="navbar-brand" href="#">
-                  <img src={logo} alt="logo" className="w-100" />
+                  <Logo src={logo} alt="logo" />
                 </Link>
                 <ButtonOpenAndClosed
                   className="navbar-toggler"
