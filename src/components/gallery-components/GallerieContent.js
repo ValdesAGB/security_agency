@@ -152,7 +152,7 @@ function GallerieContent() {
                     </IconeContainer>
                   </HoverIconeContainer>
 
-                  <Description>Home Service</Description>
+                  <Description>Service</Description>
                 </HoverContent>
               </Hover>
             </CoverContainer>

@@ -116,12 +116,12 @@ function NewsLetter() {
   return (
     <React.Fragment>
       <Section>
-        <div className="container">
+        <div className="container p-0">
           <Container>
             <Content className="row align-items-center">
               <div className="col-lg-7 col-xl">
-                <SubTitle>Join Our volunteer</SubTitle>
-                <Title>Subscribe Our Newsletter.</Title>
+                <SubTitle>Rejoignez Nos Bénévoles</SubTitle>
+                <Title>S'incrire à notre Newsletter.</Title>
               </div>
               <InputAndBtnContainer className="col">
                 <div className="row">
@@ -129,7 +129,7 @@ function NewsLetter() {
                     <Input
                       type="email"
                       required
-                      placeholder="Enter Your Email*"
+                      placeholder="Entrez votre mail*"
                       id="name"
                     />
                   </div>
@@ -139,7 +139,7 @@ function NewsLetter() {
                     onClick={(e) => e.preventDefault()}
                     className="col-6 col-sm-4 col-md-3 col-lg"
                   >
-                    SUSCRIBE
+                    S'INSCRIRE
                   </SubmitBtn>
                 </div>
               </InputAndBtnContainer>

@@ -110,14 +110,16 @@ function Home() {
           <div>
             <div className="row">
               <div className=" col-md-10 col-xl-8">
-                <h5>We Provide The Best</h5>
-                <h1>Security Service</h1>
+                <h5>Nous Fournissons Le Meilleur</h5>
+                <h1>Service de sécurité</h1>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam.
                 </p>
-                <AppointmentBtn to="/contact">GET APPOINTMENT</AppointmentBtn>
+                <AppointmentBtn to="/contact">
+                  PRENDRE RENDEZ-VOUS
+                </AppointmentBtn>
               </div>
             </div>
           </div>

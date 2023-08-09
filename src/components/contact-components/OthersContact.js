@@ -73,7 +73,7 @@ function OthersContact() {
     <React.Fragment>
       <Container>
         <Head>
-          <h3>Contact Us</h3>
+          <h3>Contactez-Nous</h3>
           <Underline>
             <TwoColors />
           </Underline>

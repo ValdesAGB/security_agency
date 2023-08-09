@@ -36,7 +36,11 @@ function Formulaire({
           ))}
 
           <div className="mb-3">
-            <Textarea required placeholder="Your message*" id="text"></Textarea>
+            <Textarea
+              required
+              placeholder="Votre message*"
+              id="text"
+            ></Textarea>
           </div>
 
           <SubmitBtn type="submit" onClick={(e) => e.preventDefault()}>

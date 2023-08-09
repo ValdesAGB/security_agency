@@ -60,7 +60,7 @@ function SubHeader({
           <div className="container">
             <div className={AnyQuestionAndIconeListContainerClassName}>
               <AnyQuestion className={AnyQuestionClassName}>
-                Have any question ?{' '}
+                Vous avez une Question ?{' '}
                 <a href="tel://+215 2145 2154" target="_blank">
                   +215 2145 2154
                 </a>

@@ -81,7 +81,7 @@ function CardService({ id, cover, title }) {
             incidid
           </Paragraph>
           <ReadBtn onClick={handleSetService} to="/service-details">
-            READ MORE
+            LIRE PLUS
           </ReadBtn>
         </div>
       </Card>

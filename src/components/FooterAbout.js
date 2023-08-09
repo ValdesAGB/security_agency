@@ -9,6 +9,7 @@ const Title = styled.h5`
   font-family: ${police.main};
   color: ${color.second};
   margin-bottom: 15px;
+  text-transform: uppercase;
   span {
     color: ${color.main};
   }
@@ -26,11 +27,12 @@ function FooterAbout() {
     <React.Fragment>
       <div className="col ">
         <Title>
-          ABOUT <span>US</span>
+          à Propos de <span>nous</span>
         </Title>
         <Paragraph>
-          There are many variations of pof em Ipsum avalable, but the majority
-          haveatime form, binjected humour, or romised scvono dos nai..but.
+          Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis,
+          nisi ut aliquid ex ea commodi consequatur suscipit laboriosam quo
+          nulla .
         </Paragraph>
       </div>
     </React.Fragment>

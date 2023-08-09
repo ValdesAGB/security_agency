@@ -8,6 +8,7 @@ const Title = styled.h5`
   font-size: 18px;
   font-family: ${police.main};
   color: ${color.second};
+  text-transform: uppercase;
   margin-bottom: 15px;
   span {
     color: ${color.main};
@@ -34,7 +35,7 @@ function FooterContact() {
     <React.Fragment>
       <div>
         <Title>
-          CONTACT <span>US</span>
+          Contactez <span>Nous</span>
         </Title>
         <Paragraph>
           ur address goes here, stree Crossroad123.

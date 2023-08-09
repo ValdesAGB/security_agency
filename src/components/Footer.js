@@ -11,6 +11,9 @@ const Foot = styled.footer`
 `
 
 const Container = styled.div`
+  padding-left: 0;
+  padding-right: 0;
+
   display: grid;
 
   @media (max-width: 575px) {

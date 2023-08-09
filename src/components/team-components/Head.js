@@ -46,10 +46,10 @@ function Head({ title, pageName }) {
           <div>
             <span>
               <Link to="/" className="homeLink">
-                Home
+                Accueil
               </Link>
             </span>
-            / <span>{pageName}</span>
+            /<span>{pageName}</span>
           </div>
         </Container>
       </Section>

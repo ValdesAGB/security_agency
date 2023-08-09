@@ -84,7 +84,11 @@ function Service() {
                 </IllustartionContainer>
                 <div className="col-9 col-md-10 col-lg-9">
                   <Title>{title}</Title>
-                  <Paragraph>{text}</Paragraph>
+                  <Paragraph>
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium, totam rem
+                    aperiam, eaque ipsa quae ab illo inventore veritatis et .
+                  </Paragraph>
                 </div>
               </div>
             </Content>

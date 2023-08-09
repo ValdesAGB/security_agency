@@ -4,8 +4,8 @@ import Guards from '../../components/accueil-components/Guards'
 
 const GuardComponentClassName = 'col-md-6 col-lg-4'
 const GuardComponentSlice = 6
-const TeamComponentTitle = 'Team Page'
-const TeamComponentPageName = 'Team'
+const TeamComponentTitle = 'Equipe'
+const TeamComponentPageName = 'Equipe'
 
 function Team() {
   useEffect(() => {

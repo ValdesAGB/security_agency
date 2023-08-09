@@ -10,6 +10,7 @@ const Title = styled.h5`
   font-family: ${police.main};
   color: ${color.second};
   margin-bottom: 15px;
+  text-transform: uppercase;
   span {
     color: ${color.main};
   }
@@ -64,10 +65,10 @@ function FooterNewletters() {
     <React.Fragment>
       <div>
         <Title>
-          NEWSLETTER <span>NOW</span>
+          NEWSLETTER <span>maintenant</span>
         </Title>
         <Paragraph>
-          There are many variations ofof reavalable, but the majority
+          Ut enim ad minima veniam, ullam corporis suscipit laboriosam.{' '}
         </Paragraph>
         <div>
           <Form className="row">

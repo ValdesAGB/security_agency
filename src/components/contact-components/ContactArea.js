@@ -6,8 +6,8 @@ import { police } from '../../untils/police'
 import { TwoColors } from '../../untils/underline'
 import OthersContact from './OthersContact'
 
-const formulaireTitle = 'Get In Touch'
-const formulaireSubmit = 'SEND'
+const formulaireTitle = 'Prendre Contact'
+const formulaireSubmit = 'ENVOYEZ'
 
 const FormnulaireContainer = styled.section`
   position: relative;

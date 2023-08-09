@@ -4,6 +4,8 @@ import { styled } from 'styled-components'
 import GallerieBtn from './GallerieBtn'
 
 const Container = styled.div`
+  padding-left: 0;
+  padding-right: 0;
   @media (max-width: 479px) {
     padding-bottom: 30px;
     padding-top: 60px;

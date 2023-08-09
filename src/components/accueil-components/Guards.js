@@ -99,9 +99,9 @@ function Guards({ GuardClassName, GuardSlice }) {
   return (
     <React.Fragment>
       <Section>
-        <div className="container">
+        <div className="container p-0">
           <Head className="row justify-content-center">
-            <h1>Our Guards</h1>
+            <h1>Nos Gardes</h1>
             <Underline>
               <BetweenBold />
             </Underline>

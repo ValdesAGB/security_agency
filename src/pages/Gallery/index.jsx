@@ -12,8 +12,8 @@ function Gallery() {
     }
   }, [window.location.pathname])
 
-  const GalleryComponentTitle = 'Gallery'
-  const GalleryComponentPageName = 'Gallery'
+  const GalleryComponentTitle = 'Galleries'
+  const GalleryComponentPageName = 'Galleries'
   return (
     <React.Fragment>
       <Head title={GalleryComponentTitle} pageName={GalleryComponentPageName} />

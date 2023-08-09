@@ -79,7 +79,7 @@ function AppointmentBtn() {
           to="/contact"
           className="col-5 col-sm-4 col-md-3 col-lg-12"
         >
-          Appointment
+          Rendez-vous
         </Appointment>
       </div>
     </React.Fragment>

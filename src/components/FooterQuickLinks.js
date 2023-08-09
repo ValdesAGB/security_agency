@@ -10,6 +10,7 @@ const Title = styled.h5`
   font-family: ${police.main};
   color: ${color.second};
   margin-bottom: 15px;
+  text-transform: uppercase;
   span {
     color: ${color.main};
   }
@@ -36,7 +37,7 @@ function FooterQuickLinks() {
     <React.Fragment>
       <div>
         <Title>
-          QUICK <span>LINKS</span>
+          Liens <span>rapides</span>
         </Title>
         <List className="list-inline">
           {FooterQuickLinksElements.map(({ id, link }) => (

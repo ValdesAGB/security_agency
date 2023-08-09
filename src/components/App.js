@@ -31,9 +31,9 @@ function App() {
             <GalleryProvider>
               <Routes>
                 <Route path="/" element={<Accueil />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contact" element={<Contact />} />
-                <Route path="/about" element={<About />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/service-details" element={<ServiceDetails />} />
                 <Route path="/gallery" element={<Gallery />} />

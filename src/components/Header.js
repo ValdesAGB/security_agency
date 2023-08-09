@@ -18,7 +18,9 @@ const Navigation = styled.div`
   }
 `
 const Logo = styled.img`
-  width: 100%;
+  @media (max-width: 1199px) {
+    width: 100%;
+  }
 `
 
 const ButtonOpenAndClosed = styled.button`
@@ -34,19 +36,16 @@ const ListLink = styled.ul`
     margin: 10px 0;
   }
   @media (min-width: 992px) and (max-width: 1199px) {
-    left: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   @media (min-width: 1200px) and (max-width: 1399px) {
-    left: 23%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   @media (min-width: 1400px) {
-    left: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +82,7 @@ function Header() {
           <div className="container p-0">
             <nav className="navbar navbar-expand-lg">
               <div className="container-fluid">
-                <Link to="/" className="navbar-brand" href="#">
+                <Link to="/" className="navbar-brand col-xl-2" href="#">
                   <Logo src={logo} alt="logo" />
                 </Link>
                 <ButtonOpenAndClosed
@@ -97,12 +96,15 @@ function Header() {
                 >
                   <span className="navbar-toggler-icon"></span>
                 </ButtonOpenAndClosed>
-                <div className="collapse navbar-collapse " id="navbarNav">
+                <div
+                  className="collapse navbar-collapse col justify-content-end"
+                  id="navbarNav"
+                >
                   <ListLink className="navbar-nav">
                     {menuElements.map(({ id, title }) => (
                       <li className="nav-item" key={id}>
                         <LinkItems
-                          to={`/${title === 'home' ? '' : title}`}
+                          to={`/${title === 'Accueil' ? '' : id}`}
                           className="nav-link"
                         >
                           {title.toUpperCase()}

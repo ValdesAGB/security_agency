@@ -17,6 +17,8 @@ const CustomCarousselDots = styled.div`
 `
 
 const ContainerSection = styled.div`
+  padding-left: 0;
+  padding-right: 0;
   @media (max-width: 479px) {
     padding-bottom: 100px;
     padding-top: 60px;
@@ -178,7 +180,7 @@ function Feedback() {
       <section>
         <ContainerSection className="container">
           <Head className="row justify-content-center">
-            <h2>Our Clients Say</h2>
+            <h2>Ce Que Disent Nos Clients</h2>
             <Underline>
               <BetweenBold />
             </Underline>

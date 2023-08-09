@@ -20,8 +20,8 @@ const Container = styled.div`
   padding: 120px 0;
 `
 
-const formulaireTitle = 'Request a Quote'
-const formulaireSubmit = 'SUBMIT INQUIRY'
+const formulaireTitle = 'Demande de Devis'
+const formulaireSubmit = 'SOUMETTRE UNE DEMANDE'
 
 const formulaireStyle = styled.div`
   background-color: ${color.formulaireBacgroundCOlor};
@@ -102,7 +102,7 @@ function Reasons() {
   return (
     <React.Fragment>
       <section>
-        <div className="container">
+        <div className="container p-0">
           <Container>
             <div className="row">
               <div className="col-lg-6">

@@ -74,9 +74,9 @@ function AllServices({ component }) {
   return (
     <React.Fragment>
       <Section>
-        <div className="container">
+        <div className="container p-0">
           <Head className="row justify-content-center">
-            <h1>Our Services</h1>
+            <h1>Nos Services</h1>
             <Underline>
               <BetweenBold />
             </Underline>

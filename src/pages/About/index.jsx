@@ -14,8 +14,8 @@ function About() {
     }
   }, [window.location.pathname])
 
-  const AboutComponentTitle = 'About Us'
-  const AboutComponentPageName = 'About Us'
+  const AboutComponentTitle = 'À propos De Nous'
+  const AboutComponentPageName = 'À propos De Nous'
   const GuardComponentClassName = 'col-md-6 col-lg'
   const GuardComponentSlice = 3
 

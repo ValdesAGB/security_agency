@@ -84,7 +84,7 @@ const Paragraph = styled.p`
 function Why() {
   return (
     <React.Fragment>
-      <HeadTitle>Why Choose Us</HeadTitle>
+      <HeadTitle>Pourquoi Nous Choisir ?</HeadTitle>
       <Underline>
         <TwoColors />
       </Underline>

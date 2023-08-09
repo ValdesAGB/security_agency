@@ -14,8 +14,8 @@ function Services() {
     }
   }, [window.location.pathname])
 
-  const ServicesComponentTitle = 'Service'
-  const ServicesComponentPageName = 'Service'
+  const ServicesComponentTitle = 'Services'
+  const ServicesComponentPageName = 'Services'
   return (
     <React.Fragment>
       <Head

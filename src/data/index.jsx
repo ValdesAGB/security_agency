@@ -3,27 +3,27 @@ export const logo =
 
 export const menuElements = [
   {
-    id: '1',
-    title: 'home',
+    id: '#',
+    title: 'Accueil',
   },
   {
-    id: '2',
-    title: 'about',
+    id: 'about',
+    title: 'à propos',
   },
   {
-    id: '3',
+    id: 'services',
     title: 'services',
   },
   {
-    id: '4',
-    title: 'gallery',
+    id: 'gallery',
+    title: 'galleries',
   },
   {
-    id: '5',
-    title: 'team',
+    id: 'team',
+    title: 'équipe',
   },
   {
-    id: '6',
+    id: 'contact',
     title: 'contact',
   },
 ]
@@ -53,28 +53,28 @@ export const SubHeaderElements = [
 export const serviceElements = [
   {
     id: '1',
-    title: 'Webcam Security',
+    title: 'Securité Caméra',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/service-01.png',
     text: 'Access complete visability through your phone or device. We provide a complete range of security solutions, day and night vision to improve security & enhance capabilities.',
   },
   {
     id: '2',
-    title: 'Security Guard',
+    title: 'Agent de Sécurité',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/service-02.png',
     text: 'Alarm services to suit the right environment. From wired to wireless systems, Remote Monitored and Intergrating systems. We Instal all alarms to suit the need of the location.',
   },
   {
     id: '3',
-    title: 'Motivated Guards',
+    title: 'Des Gardes Motivés',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/service-03.png',
     text: 'Combining identification technology with security solutions to give you a high level of protection, whether your business has a single or muliti-site entry points.',
   },
   {
     id: '4',
-    title: '24/7 Services',
+    title: 'Service 24/7 ',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/service-04.png',
     text: 'We offer & manage ongoing maintenance of your security systems. Keeping it working as it should be and keeping up with improvements that can be made.',
@@ -86,37 +86,37 @@ export const AllServicesElements = [
     id: '1',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-01.jpg',
-    title: 'Private Security',
+    title: 'Sécurité Privée',
   },
   {
     id: '2',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-02.jpg',
-    title: 'Home Security',
+    title: 'Securité Maison',
   },
   {
     id: '3',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-03.jpg',
-    title: 'Maintain Security',
+    title: 'Maintenir la Sécurité',
   },
   {
     id: '4',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-04.jpg',
-    title: 'Transport Security',
+    title: 'Securité Transport',
   },
   {
     id: '5',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-05.jpg',
-    title: 'Office Security',
+    title: 'Securité Bureau',
   },
   {
     id: '6',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/serviece/service-06.jpg',
-    title: 'Property Security',
+    title: 'Sécurité Des Biens',
   },
 ]
 
@@ -125,19 +125,19 @@ export const WhyElements = [
     id: '1',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/c-01.png',
-    title: 'Free Estimate',
+    title: 'Estimation Gratuite',
   },
   {
     id: '2',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/c-02.png',
-    title: '24/7 Services',
+    title: 'Services 24/7',
   },
   {
     id: '3',
     illustration:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/c-03.png',
-    title: 'Flat Rate Fees',
+    title: 'Tarifs Forfaitaires',
   },
 ]
 
@@ -213,11 +213,11 @@ export const GuardsElements = [
 export const FooterQuickLinksElements = [
   {
     id: '1',
-    link: 'Our Services',
+    link: 'Nos Services',
   },
   {
     id: '2',
-    link: 'Our Company',
+    link: 'Notre Entreprise',
   },
   {
     id: '3',
@@ -225,11 +225,11 @@ export const FooterQuickLinksElements = [
   },
   {
     id: '4',
-    link: 'Our Product',
+    link: 'Notre Produit',
   },
   {
     id: '5',
-    link: 'Our Fajlami',
+    link: 'Notre Fajlami',
   },
 ]
 
@@ -281,7 +281,7 @@ export const formulaireInputElements = [
   {
     id: '1',
     type: 'text',
-    placeholder: 'Name',
+    placeholder: 'Nom',
   },
 
   {
@@ -293,7 +293,7 @@ export const formulaireInputElements = [
   {
     id: '3',
     type: 'text',
-    placeholder: 'Subject',
+    placeholder: 'Sujet',
   },
 ]
 
@@ -303,28 +303,28 @@ export const StatsElements = [
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/fun-01.png',
     level: '120',
-    text: 'Happy Clients',
+    text: 'Clients Satisfaits',
   },
   {
     id: '2',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/fun-02.png',
     level: '90',
-    text: 'Award Winning',
+    text: 'Prix Gagnés',
   },
   {
     id: '3',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/fun-03.png',
     level: '130',
-    text: 'Project',
+    text: 'Projets',
   },
   {
     id: '4',
     cover:
       'https://demo.hasthemes.com/safzon-preview/assets/images/icon/fun-04.png',
     level: '350',
-    text: 'Cups of Coffee',
+    text: 'Tasses De Café',
   },
 ]
 
@@ -396,7 +396,7 @@ export const GalleryElements = [
 export const GalleryBtnElements = [
   {
     id: '1',
-    title: 'all',
+    title: 'tout',
     cat: '',
   },
   {

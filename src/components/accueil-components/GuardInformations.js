@@ -39,7 +39,7 @@ function GuardInformations({ container, name }) {
         <h4>
           <span className="name">{name}</span>
         </h4>
-        <span>Director</span>
+        <span>Direction</span>
       </GuardInformation>
     </React.Fragment>
   )

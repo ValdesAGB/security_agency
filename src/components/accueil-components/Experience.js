@@ -121,11 +121,11 @@ function Experience() {
   return (
     <React.Fragment>
       <Section>
-        <div className="container">
+        <div className="container p-0">
           <div className="row justify-content-center align-items-center">
             <div className="col-lg">
               <Title>
-                We Have 21 Years of <br /> Experience
+                Nous avons 21 ans <br /> d'Expérience
               </Title>
               <Underline>
                 <TwoColors />
@@ -140,7 +140,7 @@ function Experience() {
                 in reprehen in voluptate velit esse cillum dolore eu fugiat
                 nulla pariatur Excepteur sint occaecat cupidata non proident.
               </Paragraph>
-              <ContactBtn to="/contact">CONTACT US</ContactBtn>
+              <ContactBtn to="/contact">CONTACTEZ-NOUS</ContactBtn>
             </div>
             <VideoContainer className="col-md-8 col-lg">
               <video

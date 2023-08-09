@@ -47,7 +47,7 @@ function Details() {
   return (
     <React.Fragment>
       <Section>
-        <div className="container">
+        <div className="container p-0">
           <div>
             <Content>
               <DetailsBtn />
